@@ -1015,7 +1015,12 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    transition: border-color 250ms var(--cubic-bezier);
+}
+
+.check-item:hover,
+.check-item:focus {
+    border-color: var(--accent-color);
 }
 
 .modal-check:checked + .modal-check-text .check-item {
