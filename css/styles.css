@@ -695,7 +695,6 @@ footer {
     width: 200px;
     height: 50px;
     background: var(--accent-color);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
 
     font-weight: 700;
@@ -709,11 +708,13 @@ footer {
 
     display: block;
     transition: background-color 250ms var(--cubic-bezier);
+    transition: box-shadow 250ms var(--cubic-bezier);
 }
 
 .join-submit:hover,
 .join-submit:hover {
     background-color: #1976d2;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .join-icone {
@@ -863,6 +864,8 @@ footer {
     background: var(--white-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+
+    padding: 40px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -883,10 +886,164 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: fill 250ms var(--cubic-bezier);
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    fill: var(--accent-color);
 }
 
 .is-hidden {
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--main-title-color);
+    margin-bottom: 12px;
+}
+
+.modal-label-text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: var(--main-text-color);
+    margin-bottom: 4px;
+}
+
+.modal-form-input {
+    width: 100%;   
+    height: 40px;
+    margin-bottom: 10px;
+    padding-left: 42px;
+    padding-right: 12px;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    transition: border-color 250ms var(--cubic-bezier);
+}
+
+.modal-field {
+    position: relative;
+}
+
+.input-icon {
+    position: absolute;
+    left: 12px;
+    top: 40%;
+    transform: translateY(-40%);
+    transition: fill 250ms var(--cubic-bezier);
+}
+
+.modal-form-input:hover,
+.modal-form-input:focus {
+    border-color: var(--accent-color);
+}
+.modal-form-input:hover + .input-icon,
+.modal-form-input:focus + .input-icon {
+    fill: var(--accent-color);
+}
+
+.modal-form-textarea {
+    width: 100%;
+    height: 120px;
+    padding: 12px 16px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+
+    resize: none;
+}
+
+.modal-form-textarea:hover,
+.modal-form-textarea:focus {
+    border-color: var(--accent-color);
+}
+
+.modal-field-check {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.modal-check-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: var(--main-text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-form-link {
+    color: var(--accent-color);
+    margin-left: 5px;
+}
+
+.check-item {
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--main-title-color);
+    border-radius: 4px;
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.modal-check:checked + .modal-check-text .check-item {
+    background-color: var(--accent-color);
+    border: none;
+}
+
+.modal-submit {
+    width: 200px;
+    height: 50px;
+    color: var(--white-color);
+    background-color: var(--accent-color);
+    border-radius: 4px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+
+    margin: 0 auto;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: background-color 250ms var(--cubic-bezier);
+    transition: box-shadow 250ms var(--cubic-bezier);
+}
+
+.modal-submit:hover,
+.modal-submit:focus {
+    background-color: #1976d2;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
